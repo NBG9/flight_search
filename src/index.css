@@ -5,9 +5,152 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  overflow: auto;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* The whole screen */
+.Screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  background-color: #D9EAFD;
+}
+
+/* The Header Banner */
+.Screen img {
+  width: 600px;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  display:flex;
+  gap: 10px;
+}
+
+/* The search inputs */
+.input-field {
+  flex: 1;
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  outline: none;
+  transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  margin-bottom: 20px; /* Adds spacing between rows */
+
+}
+
+/* The sort dropdown */
+.input-field-sort {
+  flex: 1;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  outline: none;
+  transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* The number of passengers input */
+.input-field-num {
+  flex: 1;
+  width: 25%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  outline: none;
+  transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* On Focus, make input more prominent */
+.input-field:focus {
+  border-color: #3b82f6;
+  box-shadow: 0px 0px 8px rgba(59, 130, 246, 0.5);
+}
+
+/* The search button*/
+.search-button {
+  color: #3b82f6;
+  flex: 1;
+  width: 200%;
+  /* height: 60%; */
+  padding: 10px;
+  border: 1px solid #003cff;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  outline: none;
+  transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  margin-bottom: 20px; /* Adds spacing between rows */
+
+}
+
+.flight-results-container {
+  flex: 1;
+  overflow-y: auto;
+  max-height: 45vh;
+  padding: 20px;
+  background-color: #D9EAFD;
+}
+
+/* Each row of results */
+.flight-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  padding-top: 0px;
+  background-color: #F8FAFC;
+  border-radius: 10px;
+  overflow: hidden;
+  border: #3b82f6;
+  border-radius: 5;
+  margin-bottom: 10px; /* Adds spacing between rows */
+
+}
+
+.flight-column {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+}
+
+.flight-column h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.flight-column p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.airline-logo {
+  width: 6px;
+  height: 2px;
+  object-fit: scale-down;
+  margin-left: 0px;
 }
