@@ -12,9 +12,7 @@ function FlightResults({ flights, onSortChange }) {
     return (
         // Results
         <div>
-            {flights.length > 0 && (
-                <h2 className="text-xl font-bold mt-6">Flight Results</h2>
-            )}            {flights.length === 0 ? (
+            {flights.length === 0 ? (
                 <div></div>
             ) : (
                 flights.map((flight, index) => (
